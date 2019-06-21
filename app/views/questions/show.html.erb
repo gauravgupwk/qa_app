@@ -1,0 +1,11 @@
+</br>
+<div class="col-md-8">
+  <div class="card" style="width: 50rem;">
+    <div class="card-body">
+      <h5 class="card-title">Que(<%= @question.user.email %>): <%= @question.question  %></h5>
+      <% @question.answers.each do |answer| %>
+        <p class="card-text">Ans (<%= answer.user.email %>): <%= answer.answer %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

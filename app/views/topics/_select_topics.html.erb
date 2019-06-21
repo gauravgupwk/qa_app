@@ -1,0 +1,5 @@
+<%= form_tag select_topic_path do %>
+  <%= collection_check_boxes(:topic, :topic_ids, @topics, :id, :name) %>
+
+  <%= submit_tag "Submit" %>
+<% end %>

@@ -1,0 +1,5 @@
+<% if current_user.topics.blank? %>
+  <%= render partial: "topics/select_topics"  %>
+<% else %>
+  <%= render partial: 'questions/questions' %>
+<% end %>

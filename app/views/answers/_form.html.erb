@@ -1,0 +1,11 @@
+</br>
+<div class="col-md-8">
+  <h3><%= @question.question %> </h3>
+  <%= form_for @answer, url: question_answers_path(@question) do |f| %>
+    <div class="form-group">
+      <%= f.label :answer %>
+      <%= f.text_area :answer, cols: 50, rows: 4, class: "form-control" %>
+    </div>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>

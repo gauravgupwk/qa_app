@@ -1,0 +1,19 @@
+</br>
+<ul class="list-group">
+  <li class="list-group-item">
+    User Email: <%= @user.email %>
+    <span id="follow_buttons">
+      <%= render partial: "follow_buttons" %>
+    </span>
+  </li>
+</ul>
+</br>
+<ul class="list-group">
+  <li class="list-group-item">
+    <h5>Questions</h5>
+  </li>
+
+  <% @questions.each do |question| %>
+    <li class="list-group-item"><%= question.question %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,22 @@
+</br>
+<div class='row'>
+
+  <% @questions.each do |question| %>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= question.topic.name %></h5>
+          <h5><%= link_to question.user.email, profile_path(question.user) %></h5>
+          <p class="card-text">
+            <%= link_to question.question, question_path(question) %>
+          </p>
+          <%= link_to "Edit", edit_question_path(question), class: "btn btn-primary" if question.user_id == current_user.id%>
+
+          <%= link_to "Answer", new_question_answer_path(question), class: "btn btn-primary" %>
+
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</div>
